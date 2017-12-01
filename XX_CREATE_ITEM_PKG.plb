@@ -1,7 +1,7 @@
 CREATE OR REPLACE PACKAGE BODY XX_CREATE_ITEM
 AS
 
-  PROCEDURE XX_CREATEITEM   (errbuf    OUT  VARCHAR2,
+  PROCEDURE XX_CREATEITEM    (errbuf    OUT  VARCHAR2,
                              retcode   OUT  VARCHAR2 )
 							 
   IS
