@@ -25,7 +25,8 @@ public class Test1 {
 	public static void login(){
 		driver.findElement(By.xpath("//form[@id='login']//input[@name='usernameField']")).sendKeys("MBHARMAL");
 		driver.findElement(By.xpath("//form[@id='login']//input[@name='passwordField']")).sendKeys("Welcome123");
-		driver.findElement(By.xpath("//*[@id='ButtonBox']/button[1]")).click();
+		driver.findElement(By.xpath("//div[@clas='control_box center']/button[@class='OraButton left']")).click();
+		driver.manage().timeouts().implicitlyWait(40,TimeUnit.SECONDS);
 		String message=driver.getTitle();
 		System.out.println("Page title "+message);
 	}
