@@ -27,8 +27,16 @@ public class Test1 {
 		driver.findElement(By.xpath("//form[@id='login']//input[@name='passwordField']")).sendKeys("Welcome123");
 		driver.findElement(By.xpath("//div[@class='control_box center']/button[@class='OraButton left']")).click();
 		driver.manage().timeouts().implicitlyWait(40,TimeUnit.SECONDS);
+		try {
+			Thread.sleep(10000);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
 		String message=driver.getTitle();
 		System.out.println("Page title "+message);
+	}
 	}
 	
 	
