@@ -28,7 +28,7 @@ public class Test1 {
 		driver.findElement(By.xpath("//div[@class='control_box center']/button[@class='OraButton left']")).click();
 		driver.manage().timeouts().implicitlyWait(40,TimeUnit.SECONDS);
 		try {
-			Thread.sleep(10000);
+			Thread.sleep(60000);
 		} catch (InterruptedException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
