@@ -69,12 +69,12 @@ public class Test1 {
 		try {
 			Thread.sleep(60000);
 			WebElement price=driver.findElement(By.xpath("//form[@name='DefaultFormName']//table[@id='ControlsTableLayout']//tr[@id='SearchResultsRow']//table[@id='SearchResultsTableRN1:Price:0__xc_']//span[@class='OraDataText MessageComponentLayoutText']"));
-			if(price.isSelected()){
+			if(price.isDisplayed()){
 				
 				System.out.println("Price of item is "+ price.getText());
 				}
 				else{
-					System.out.println("Issue with price");
+					System.out.println("Issue with price element");
 				}
 		} catch (InterruptedException e) {
 			// TODO Auto-generated catch block
