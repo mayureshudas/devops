@@ -24,7 +24,7 @@ public class Test1 {
 	@Test
 	public static void login(){
 		driver.findElement(By.xpath("//form[@id='login']//input[@name='usernameField']")).sendKeys("MBHARMAL");
-		driver.findElement(By.xpath("//form[@id='login']//input[@name='passwordField']")).sendKeys("Welcome123");
+		driver.findElement(By.xpath("//form[@id='login']//input[@name='passwordField']")).sendKeys("Nov@2017");
 		driver.findElement(By.xpath("//*[@id='ButtonBox']/button")).click();
 		
 		try {
