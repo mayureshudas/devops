@@ -4,6 +4,7 @@ import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.firefox.FirefoxBinary;
 import org.testng.annotations.BeforeSuite;
@@ -48,7 +49,9 @@ public class Test1 {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		driver.findElement(By.xpath("//form[@name='DefaultFormName']//table[@class='xhq']/tr[@class='x8e']//div[@id='navContainer0']//div[@class='listContainer']//a[@class='entryLink']")).click();
+          driver.findElement(By.xpath("//form[@name='DefaultFormName']//table//table[@class='xhq']//tr[@class='x8e']//div[@id='navContainer0']//div[@class='listContainer']//a[@title='iProcurement']")).click();
+		
+		driver.findElement(By.xpath("//form[@name='DefaultFormName']//table//table[@class='xhq']//tr[@class='x8e']//div[@id='navContainer0']//div[@id='navContainer1']//div[@class='listContainer']//a[@title='iProcurement Home Page']")).click();
 		try {
 			Thread.sleep(60000);
 			System.out.println("clicked on procurement ");
@@ -57,9 +60,11 @@ public class Test1 {
 			e.printStackTrace();
 		}
 		
-		driver.findElement(By.xpath("//form[@name='DefaultFormName']//table[@id='SearchTextInput__xc_']//input[@id='SearchTextInput']")).sendKeys("blank");
+		driver.findElement(By.xpath("//form[@name='DefaultFormName']//table[@id='SearchTextInput__xc_']//input[@id='SearchTextInput']")).sendKeys("CM45329");
 		
-		
+		driver.findElement(By.xpath("//form[@name='DefaultFormName']//button[@id='SearchBoxGo']")).click();
+		WebElement price=driver.findElement(By.xpath("//form[@name='DefaultFormName']//table[@id='ControlsTableLayout']//tr[@id='SearchResultsRow']//table[@id='SearchResultsTableRN1:Price:0__xc_']//span[@class='OraDataText MessageComponentLayoutText']"));
+		System.out.println("Price of item is "+price.getText());
 		
 	}
 	
