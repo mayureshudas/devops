@@ -16,7 +16,7 @@ public class Test1 {
 		System.setProperty("webdriver.gecko.driver", "/var/lib/geckodriver");
 		System.setProperty("webdriver.firefox.bin", "/usr/bin/firefox");
 		driver=new FirefoxDriver();
-		driver.manage().window().maximize();
+		//driver.manage().window().maximize();
 		driver.manage().timeouts().implicitlyWait(40,TimeUnit.SECONDS);
 		driver.get("http://ebsdevops03.compute-a436090.oraclecloud.internal:8000/OA_HTML/AppsLogin");
 		
