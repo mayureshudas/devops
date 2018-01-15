@@ -23,7 +23,7 @@ public class Test1 {
 			
 		options.addPreference("log", "{level: trace}");
 		
-			capabilities.setCapability("marionette", false);
+			capabilities.setCapability("marionette", true);
 				capabilities.setCapability("moz:firefoxOptions", options);
 		
 
