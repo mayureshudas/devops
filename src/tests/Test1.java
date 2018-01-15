@@ -1,6 +1,8 @@
 package tests;
 
 import java.util.concurrent.TimeUnit;
+import org.openqa.selenium.firefox.FirefoxOptions;
+import org.openqa.selenium.remote.DesiredCapabilities;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -16,7 +18,18 @@ public class Test1 {
 	public static void setup(){
 		System.setProperty("webdriver.gecko.driver", "/var/lib/geckodriver");
 		System.setProperty("webdriver.firefox.bin", "/usr/bin/firefox");
-		driver=new FirefoxDriver();
+		DesiredCapabilities capabilities = DesiredCapabilities.firefox();
+		FirefoxOptions options = new FirefoxOptions();
+			
+		options.addPreference("log", "{level: trace}");
+		
+			capabilities.setCapability("marionette", false);
+				capabilities.setCapability("moz:firefoxOptions", options);
+		
+
+			
+		driver = new FirefoxDriver(capabilities);
+		//driver=new FirefoxDriver();
 		//driver.manage().window().maximize();
 		driver.manage().timeouts().implicitlyWait(100,TimeUnit.SECONDS);
 		driver.get("http://ebsdevops03.compute-a436090.oraclecloud.internal:8000/OA_HTML/AppsLogin");
