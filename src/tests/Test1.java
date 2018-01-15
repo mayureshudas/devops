@@ -18,7 +18,7 @@ public class Test1 {
 		System.setProperty("webdriver.firefox.bin", "/usr/bin/firefox");
 		driver=new FirefoxDriver();
 		//driver.manage().window().maximize();
-		driver.manage().timeouts().implicitlyWait(40,TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(100,TimeUnit.SECONDS);
 		driver.get("http://ebsdevops03.compute-a436090.oraclecloud.internal:8000/OA_HTML/AppsLogin");
 		
 	}
