@@ -16,10 +16,10 @@ public class Test1 {
 	public static WebDriver driver;
 	@BeforeSuite
 	public static void setup(){
-		System.setProperty("webdriver.chrome.driver", "C:\\Users\\Administrator\\Downloads\\chromedriver_win32\\chromedriver.exe");
-		 driver = new ChromeDriver();
+		//System.setProperty("webdriver.chrome.driver", "C:\\Users\\Administrator\\Downloads\\chromedriver_win32\\chromedriver.exe");
+		 //driver = new ChromeDriver();
 		
-		/*System.setProperty("webdriver.gecko.driver", "/var/lib/geckodriver");
+		System.setProperty("webdriver.gecko.driver", "/var/lib/geckodriver");
 		System.setProperty("webdriver.firefox.bin", "/usr/bin/firefox");
 		DesiredCapabilities capabilities = DesiredCapabilities.firefox();
 		FirefoxOptions options = new FirefoxOptions();
@@ -31,7 +31,7 @@ public class Test1 {
 		
 
 			
-		driver = new FirefoxDriver(capabilities);*/
+		driver = new FirefoxDriver(capabilities);
 		//driver=new FirefoxDriver();
 		//driver.manage().window().maximize();
 		
@@ -96,7 +96,7 @@ public class Test1 {
 		} catch (InterruptedException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
-			//System.out.println("");
+			
 		}
 
 	}
