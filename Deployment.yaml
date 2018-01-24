@@ -1,0 +1,11 @@
+---
+- hosts: ApplicationServers
+  remote_user: opc
+  become: yes
+  become_user: oracle
+  tasks:
+     - name: copy the zip file to remote server
+       copy: src=/var/lib/jenkins/workspace/launch_pad/Deployment.zip dest=/u01/LANDING mode=0755
+     - name: Execute the script
+       command: sh /u01/scripts/Execute.sh
+
