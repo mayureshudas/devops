@@ -21,7 +21,7 @@ public class Test1 {
 		
 		System.setProperty("webdriver.gecko.driver", "/var/lib/geckodriver");
 		System.setProperty("webdriver.firefox.bin", "/usr/bin/firefox");
-		DesiredCapabilities capabilities = DesiredCapabilities.firefox();
+		/*DesiredCapabilities capabilities = DesiredCapabilities.firefox();
 		FirefoxOptions options = new FirefoxOptions();
 			
 		options.addPreference("log", "{level: trace}");
@@ -31,11 +31,11 @@ public class Test1 {
 		
 
 			
-		driver = new FirefoxDriver(capabilities);
-		//driver=new FirefoxDriver();
+		driver = new FirefoxDriver(capabilities);*/
+		driver=new FirefoxDriver();
 		//driver.manage().window().maximize();
 		
-		driver.manage().timeouts().implicitlyWait(100,TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(240,TimeUnit.SECONDS);
 		driver.get("http://ebsdevops03.compute-a436090.oraclecloud.internal:8000/OA_HTML/AppsLogin");
 		
 	}
@@ -45,12 +45,12 @@ public class Test1 {
 		driver.findElement(By.xpath("//form[@id='login']//input[@name='passwordField']")).sendKeys("Nov@2017");
 		driver.findElement(By.xpath("//*[@id='ButtonBox']/button")).click();
 		
-		try {
+		/*try {
 			Thread.sleep(60000);
 		} catch (InterruptedException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
-		}
+		}*/
 		
 		String message=driver.getTitle();
 		System.out.println("Page title "+message);
@@ -60,22 +60,22 @@ public class Test1 {
 		
 		driver.findElement(By.xpath("//form[@name='DefaultFormName']//table[@class='xhq']//a[@class='OraUniversalNavigator']")).click();
 		driver.findElement(By.xpath("//form[@name='DefaultFormName']//table[@class='xhq']//a[@class='OraUniversalNavigator']//input[@id='navSearch']")).sendKeys("iprocurement");
-		try {
+		/*try {
 			Thread.sleep(60000);
 		} catch (InterruptedException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
-		}
+		}*/
           //driver.findElement(By.xpath("//form[@name='DefaultFormName']//table//table[@class='xhq']//tr[@class='x8e']//div[@id='navContainer0']//div[@class='listContainer']//a[@title='iProcurement']")).click();
 		
 		driver.findElement(By.xpath("//form[@name='DefaultFormName']//table//table[@class='xhq']//tr[@class='x8e']//div[@id='navContainer0']//div[@id='navContainer1']//div[@class='listContainer']//a[@title='iProcurement Home Page (iProcurement)']")).click();
-		try {
+		/*try {
 			Thread.sleep(60000);
 			System.out.println("clicked on procurement ");
 		} catch (InterruptedException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
-		}
+		}*/
 		
 		driver.findElement(By.xpath("//form[@name='DefaultFormName']//table[@id='SearchTextInput__xc_']//input[@id='SearchTextInput']")).sendKeys("CM45329");
 		
@@ -83,8 +83,7 @@ public class Test1 {
 		//WebElement price=driver.findElement(By.xpath("//form[@name='DefaultFormName']//table[@id='ControlsTableLayout']//tr[@id='SearchResultsRow']//table[@id='SearchResultsTableRN1:Price:0__xc_']//span[@class='OraDataText MessageComponentLayoutText']"));
 		
 		
-		try {
-			Thread.sleep(60000);
+		
 			WebElement price=driver.findElement(By.xpath("//form[@name='DefaultFormName']//table[@id='ControlsTableLayout']//tr[@id='SearchResultsRow']//table[@id='SearchResultsTableRN1:Price:0__xc_']//span[@class='OraDataText MessageComponentLayoutText']"));
 			if(price.isDisplayed()){
 				
@@ -93,11 +92,7 @@ public class Test1 {
 				else{
 					System.out.println("Issue with price element");
 				}
-		} catch (InterruptedException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-			
-		}
+		
 		
 	}
 	
