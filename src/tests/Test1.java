@@ -13,7 +13,7 @@ import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.Test;
 
 public class Test1 {
-	public static WebDriver driver;
+	public  WebDriver driver;
 	@BeforeSuite
 	public static void setup(){
 		//System.setProperty("webdriver.chrome.driver", "C:\\Users\\Administrator\\Downloads\\chromedriver_win32\\chromedriver.exe");
@@ -100,4 +100,5 @@ public class Test1 {
 		}
 
 	}
+	driver.Quit();
 }
