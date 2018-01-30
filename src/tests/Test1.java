@@ -15,7 +15,7 @@ import org.testng.annotations.Test;
 public class Test1 {
 	public  WebDriver driver;
 	@BeforeSuite
-	public static void setup(){
+	public void setup(){
 		//System.setProperty("webdriver.chrome.driver", "C:\\Users\\Administrator\\Downloads\\chromedriver_win32\\chromedriver.exe");
 		 //driver = new ChromeDriver();
 		
@@ -40,7 +40,7 @@ public class Test1 {
 		
 	}
 	@Test
-	public static void login(){
+	public void login(){
 		driver.findElement(By.xpath("//form[@id='login']//input[@name='usernameField']")).sendKeys("MBHARMAL");
 		driver.findElement(By.xpath("//form[@id='login']//input[@name='passwordField']")).sendKeys("Nov@2017");
 		driver.findElement(By.xpath("//*[@id='ButtonBox']/button")).click();
@@ -56,7 +56,7 @@ public class Test1 {
 		System.out.println("Page title "+message);
 	}
 	@Test
-	public static void searchProduct(){
+	public void searchProduct(){
 		
 		driver.findElement(By.xpath("//form[@name='DefaultFormName']//table[@class='xhq']//a[@class='OraUniversalNavigator']")).click();
 		driver.findElement(By.xpath("//form[@name='DefaultFormName']//table[@class='xhq']//a[@class='OraUniversalNavigator']//input[@id='navSearch']")).sendKeys("iprocurement");
