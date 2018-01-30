@@ -98,7 +98,7 @@ public class Test1 {
 			e.printStackTrace();
 			
 		}
-		driver.Quit();
+		
 	}
 	
 }
