@@ -21,7 +21,7 @@ public class Test1 {
 		
 		System.setProperty("webdriver.gecko.driver", "/var/lib/geckodriver");
 		System.setProperty("webdriver.firefox.bin", "/usr/bin/firefox");
-		/*DesiredCapabilities capabilities = DesiredCapabilities.firefox();
+		DesiredCapabilities capabilities = DesiredCapabilities.firefox();
 		FirefoxOptions options = new FirefoxOptions();
 			
 		options.addPreference("log", "{level: trace}");
@@ -31,8 +31,8 @@ public class Test1 {
 		
 
 			
-		driver = new FirefoxDriver(capabilities);*/
-		driver=new FirefoxDriver();
+		driver = new FirefoxDriver(capabilities);
+		//driver=new FirefoxDriver();
 		//driver.manage().window().maximize();
 		
 		driver.manage().timeouts().implicitlyWait(240,TimeUnit.SECONDS);
