@@ -87,7 +87,7 @@ public class Test1 {
 			WebElement price=driver.findElement(By.xpath("//form[@name='DefaultFormName']//table[@id='ControlsTableLayout']//tr[@id='SearchResultsRow']//table[@id='SearchResultsTableRN1:Price:0__xc_']//span[@class='OraDataText MessageComponentLayoutText']"));
 			if(price.isDisplayed()){
 				
-				System.out.println("Price of item is "+ price.getText());
+			System.out.println("Price of item is "+ price.getText());
 				}
 				else{
 					System.out.println("Issue with price element");
