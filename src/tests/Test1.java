@@ -84,7 +84,7 @@ public class Test1 {
 		
 		
 		
-			WebElement price=driver.findElement(By.xpath("//form[@name='DefaultFormName']//table[@id='ControlsTableLayout']//tr[@id='SearchResultsRow']//table[@id='SearchResultsTableRN1:Price:0__xc_']//span[@class='OraDataText MessageComponentLayoutText']"));
+			WebElement price=driver.findElement(By.xpath("//form[@name='DefaultFormName']//table[@id='ControlsTableLayout']//tr[@id='SearchResultsRow']//table[@id='SearchResultsTableRN1:Price:0__xc_']//span[@class='OraPromptText OraPromptSpaceBig']"));
 			if(price.isDisplayed()){
 				
 			System.out.println("Price of item is "+ price.getText());
