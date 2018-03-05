@@ -59,7 +59,7 @@ public class Test1 {
 	public void searchProduct(){
 		
 		driver.findElement(By.xpath("//form[@name='DefaultFormName']//table[@class='xhq']//a[@class='OraUniversalNavigator']")).click();
-		//driver.findElement(By.xpath("//form[@name='DefaultFormName']//table[@class='xhq']//a[@class='OraUniversalNavigator']//input[@id='navSearch']")).sendKeys("iprocurement");
+		driver.findElement(By.xpath("//form[@name='DefaultFormName']//table[@class='xhq']//a[@class='OraUniversalNavigator']//input[@id='navSearch']")).sendKeys("iprocurement");
 		try {
 			Thread.sleep(60000);
 		} catch (InterruptedException e) {
@@ -84,7 +84,7 @@ public class Test1 {
 		
 		
 		
-			WebElement price=driver.findElement(By.xpath("//form[@name='DefaultFormName']//table[@id='ControlsTableLayout']//tr[@id='SearchResultsRow']//table[@id='SearchResultsTableRN1:Price:0__xc_']//span[contains(text(),'Price')]"));
+			WebElement price=driver.findElement(By.xpath("//form[@name='DefaultFormName']//table[@id='ControlsTableLayout']//tr[@id='SearchResultsRow']//table[@id='SearchResultsTableRN1:Price:0__xc_']//span[@class='OraDataText MessageComponentLayoutText']"));
 			if(price.isDisplayed()){
 				
 			System.out.println("Price of item is "+ price.getText());
