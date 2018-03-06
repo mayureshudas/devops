@@ -16,10 +16,10 @@ public class Test1 {
 	public  WebDriver driver;
 	@BeforeSuite
 	public void setup(){
-		//System.setProperty("webdriver.chrome.driver", "C:\\Users\\Administrator\\Downloads\\chromedriver_win32\\chromedriver.exe");
-		 //driver = new ChromeDriver();
+		System.setProperty("webdriver.chrome.driver", "C:\\Users\\Administrator\\Downloads\\chromedriver_win32 (1)\\chromedriver.exe");
+		 driver = new ChromeDriver();
 		
-		System.setProperty("webdriver.gecko.driver", "/var/lib/geckodriver");
+		/*System.setProperty("webdriver.gecko.driver", "/var/lib/geckodriver");
 		System.setProperty("webdriver.firefox.bin", "/usr/bin/firefox");
 		DesiredCapabilities capabilities = DesiredCapabilities.firefox();
 		FirefoxOptions options = new FirefoxOptions();
@@ -31,9 +31,9 @@ public class Test1 {
 		
 
 			
-		driver = new FirefoxDriver(capabilities);
+		driver = new FirefoxDriver(capabilities);*/
 		//driver=new FirefoxDriver();
-		//driver.manage().window().maximize();
+		driver.manage().window().maximize();
 		
 		driver.manage().timeouts().implicitlyWait(100,TimeUnit.SECONDS);
 		driver.get("http://ebsdevops03.compute-a436090.oraclecloud.internal:8000/OA_HTML/AppsLogin");
