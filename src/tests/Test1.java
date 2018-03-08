@@ -46,7 +46,7 @@ public class Test1 {
 		driver.findElement(By.xpath("//*[@id='ButtonBox']/button")).click();
 		
 		try {
-			Thread.sleep(60000);
+			Thread.sleep(30000);
 		} catch (InterruptedException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
@@ -61,7 +61,7 @@ public class Test1 {
 		driver.findElement(By.xpath("//form[@name='DefaultFormName']//table[@class='xhq']//a[@class='OraUniversalNavigator']")).click();
 		driver.findElement(By.xpath("//form[@name='DefaultFormName']//table[@class='xhq']//a[@class='OraUniversalNavigator']//input[@id='navSearch']")).sendKeys("iprocurement");
 		try {
-			Thread.sleep(60000);
+			Thread.sleep(30000);
 		} catch (InterruptedException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
@@ -70,7 +70,7 @@ public class Test1 {
 		
 		driver.findElement(By.xpath("//form[@name='DefaultFormName']//table//table[@class='xhq']//tr[@class='x8e']//div[@id='navContainer0']//div[@id='navContainer1']//div[@class='listContainer']//a[@title='iProcurement Home Page']")).click();
 		try {
-			Thread.sleep(60000);
+			Thread.sleep(30000);
 			System.out.println("clicked on procurement ");
 		} catch (InterruptedException e) {
 			//TODO Auto-generated catch block
