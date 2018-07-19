@@ -36,7 +36,7 @@ public class Test1 {
 		driver.manage().window().maximize();
 		
 		driver.manage().timeouts().implicitlyWait(100,TimeUnit.SECONDS);
-		driver.get("http://ebsdevops03.compute-a436090.oraclecloud.internal:8000/OA_HTML/AppsLogin");
+		driver.get("http://ebsdevops03.compute-602842092.oraclecloud.internal:8000");
 		
 	}
 	@Test
