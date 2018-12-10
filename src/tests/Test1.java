@@ -59,37 +59,38 @@ public class Test1 {
 	public void searchProduct(){
 		
 		driver.findElement(By.xpath("//form[@name='DefaultFormName']//table[@class='xhq']//a[@class='OraUniversalNavigator']")).click();
-		driver.findElement(By.xpath("//form[@name='DefaultFormName']//table[@class='xhq']//a[@class='OraUniversalNavigator']//input[@id='navSearch']")).sendKeys("iprocurement");
+		driver.findElement(By.xpath("//form[@name='DefaultFormName']//table[@class='xhq']//a[@class='OraUniversalNavigator']//input[@id='navSearch']")).sendKeys("Functional Administrator");
 		try {
 			Thread.sleep(10000);
 		} catch (InterruptedException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-          driver.findElement(By.xpath("//form[@name='DefaultFormName']//table//table[@class='xhq']//tr[@class='x8e']//div[@id='navContainer0']//div[@class='listContainer']//a[@title='iProcurement']")).click();
-		
-		driver.findElement(By.xpath("//form[@name='DefaultFormName']//table//table[@class='xhq']//tr[@class='x8e']//div[@id='navContainer0']//div[@id='navContainer1']//div[@class='listContainer']//a[@title='iProcurement Home Page']")).click();
-		try {
-			Thread.sleep(10000);
-			System.out.println("clicked on procurement ");
-		} catch (InterruptedException e) {
-			//TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-		
-		driver.findElement(By.xpath("//form[@name='DefaultFormName']//table[@id='SearchTextInput__xc_']//input[@id='SearchTextInput']")).sendKeys("TEST-DEVOPS_1004");
-		
-		driver.findElement(By.xpath("//form[@name='DefaultFormName']//button[@id='SearchBoxGo']")).click();
-		//WebElement price=driver.findElement(By.xpath("//form[@name='DefaultFormName']//table[@id='ControlsTableLayout']//tr[@id='SearchResultsRow']//table[@id='SearchResultsTableRN1:Price:0__xc_']//span[@class='OraDataText MessageComponentLayoutText']"));
-		
-		
-		
-			WebElement price=driver.findElement(By.xpath("//form[@name='DefaultFormName']//table[@id='ControlsTableLayout']//tr[@id='SearchResultsRow']//table[@id='SearchResultsTableRN1:Price:0__xc_']//span[@class='OraDataText MessageComponentLayoutText']"));
+	      driver.findElement(By.xpath("//form[@name='DefaultFormName']//table//table[@class='xhq']//tr[@class='x8e']//div[@id='navContainer0']//div[@class='listContainer']//a[@title='Functional Administrator']")).click();
+	      driver.findElement(By.xpath("//form[@name='DefaultFormName']//table//table[@class='xhq']//tr[@class='x8e']//div[@id='navContainer0']//div[@id='navContainer1']//div[@class='listContainer']//a[@title='Home']")).click();
+	      driver.findElement(By.xpath("//form[@name='DefaultFormName']//table//table[@class='x1k']//a[@title='Core Services']")).click();
+	      driver.findElement(By.xpath("//form[@name='DefaultFormName']//table//td[@class='x9y']//a[@title='Caching Framework']")).click();
+	      driver.findElement(By.xpath("//form[@name='DefaultFormName']//table//table[@class='x83']//a[@title='Global Configuration']")).click();
+	      driver.findElement(By.xpath("//form[@name='DefaultFormName']//table[@class='x6w']//table//a[@id='N49']")).click();
+	      
+	      driver.get("http://ebsdevops03.compute-602842092.oraclecloud.internal:8000");
+			driver.findElement(By.xpath("//form[@id='login']//input[@name='usernameField']")).sendKeys("MBHARMAL");
+			driver.findElement(By.xpath("//form[@id='login']//input[@name='passwordField']")).sendKeys("Nov@2017");
+			driver.findElement(By.xpath("//*[@id='ButtonBox']/button")).click();
 			
-				
-			System.out.println("Price of item is "+ price.getText());
-								
-		//system
+			driver.findElement(By.xpath("//form[@name='DefaultFormName']//table[@class='xhq']//a[@class='OraUniversalNavigator']")).click();
+			driver.findElement(By.xpath("//form[@name='DefaultFormName']//table[@class='xhq']//a[@class='OraUniversalNavigator']//input[@id='navSearch']")).sendKeys("iprocurement");
+			try {
+				Thread.sleep(10000);
+			} catch (InterruptedException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+	          driver.findElement(By.xpath("//form[@name='DefaultFormName']//table//table[@class='xhq']//tr[@class='x8e']//div[@id='navContainer0']//div[@class='listContainer']//a[@title='iProcurement']")).click();
+			
+			driver.findElement(By.xpath("//form[@name='DefaultFormName']//table//table[@class='xhq']//tr[@class='x8e']//div[@id='navContainer0']//div[@id='navContainer1']//div[@class='listContainer']//a[@title='iProcurement Home Page']")).click();
+			
+			driver.findElement(By.xpath("//form[@name='DefaultFormName']//table//table[@class='x18']//a[@title='Non-Catalog Request']")).click();
 	}
 	
 }
